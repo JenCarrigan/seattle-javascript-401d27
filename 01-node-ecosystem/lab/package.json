@@ -1,0 +1,17 @@
+{
+  "name": "codefellows",
+  "jest": {
+    "verbose": true
+  },
+  "version": "1.0.0",
+  "description": "lab1",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
