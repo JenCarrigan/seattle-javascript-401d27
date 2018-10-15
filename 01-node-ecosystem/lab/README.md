@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) 01: Node Ecosystem
-========================================================
+# Describe values of each exported module in lib folder
 
 ## Implementation
 * Create a file called `index.js` that requires both the greet and arithmetic modules.
@@ -39,7 +38,10 @@ Create a NodeJS module in the `lib` directory named `arithmetic.js`. This module
 
 
 ### Documentation
-In your README.md file, describe the exported values of each module defined in your `lib` directory. Every function description should include it's airty (expected number of parameters), the expected data for each parameter (data-type and limitations), and the expected output behavior (for both valid and invalid use). Feel free to include any additional information that you would like.
+Greet expects a string as its only parameter. If the parameter is a valid string, it exports a new string with "Hello " appended to front.
+Arithmetic expects two parameters, both numbers. If the parameters are valid numbers, it will push the added numbers into the added key of and object, and push the subtracted numbers into the subtracted key of said object. If either or both of the parameters are invalid numbers (bools, strings, etc.) it will return with a null object. Either way, an object will be exported.
 
 ### Deployment - Stretch Goal : Will cover in class 2
 Pushing to GitHub should trigger Travis-CI build. See https://dev.to/lauragift21/setup-continuous-integration-with-travis-ci-in-your-nodejs-app-26i2
+
+
