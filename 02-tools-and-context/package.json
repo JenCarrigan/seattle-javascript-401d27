@@ -1,0 +1,12 @@
+{
+  "name": "02-tools-and-context",
+  "version": "1.0.0",
+  "description": "![cf](http://i.imgur.com/7v5ASc8.png) 02: Tools and Context =====================================",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "test": "jest --verbose --coverage --watchAll"
+  },
+  "author": "",
+  "license": "ISC"
+}
