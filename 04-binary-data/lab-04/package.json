@@ -1,0 +1,12 @@
+{
+  "name": "lab-04",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "test": "jest --verbose --coverage --watchAll"
+  },
+  "author": "",
+  "license": "ISC"
+}
