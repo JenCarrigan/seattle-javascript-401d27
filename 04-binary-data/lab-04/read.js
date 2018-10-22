@@ -1,17 +1,19 @@
 'use strict';
 
 const fs = require('fs');
+const parse = require('./parse.js');
 
-module.exports = (path, done) => {
+module.exports = (bmp, operation, path, done) => {
 
-    const gotFile = (err, fileData) => {
-        if (err) {
+    fs.readFile(path, (err, buffer) => {
+        if(err) {
             done(err);
             return;
         }
-        done(null, fileData.toString());
-    }
+        done(null, buffer);
+        parse(operation, bmp, buffer);
 
-    fs.readFile(path, gotFile);
+    });
+
  
 };
