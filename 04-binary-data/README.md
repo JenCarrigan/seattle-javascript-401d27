@@ -127,4 +127,55 @@ DEC |HEX |BIN
 [events api docs]: https://nodejs.org/api/events.html
 [bitmap file format]: https://en.wikipedia.org/wiki/BMP_file_format
 
+## Index module
+Exports: Bitmap
+Parameters: An array of arguments that were passed in on command line
+
+The index mdodule takes in an arg array and parses that for testing to make sure the arguments are valid. If all are, it should create a bitmap from the bitmap module, read the file, and then return the edited bitmap.
+
+## Bitmap module
+Exports: Bitmap
+Parameters: path to a bitmap file
+
+The bitmap module creates a new class object that is a bitmap and returns it for editing.
+
+## Read module
+Exports: Nothing? A read file? - unsure about this one.
+Parameters: Bitmap, operation to be performed (greyscale or inverse), a path to the bitmap, and a callback.
+
+The read module reads a file and once opened and then calls the parse module on the Bitmap.
+
+## Parse module
+Exports: A parsed bitmap (a bitmap that now has class properties)
+Parameters: An operation to be performed, a bitmap, and the bitmap's buffer
+
+The parse module assigns properties to the read bitmap and then calls the transform module
+
+## Transform module
+Exports: a bitmap
+Parameters: An operation and a bitmap
+
+This module tests the operation (remember, we've already done our checks to make sure the operation is valid) and either calls the inverse or the greyscale module
+
+## Greyscale / Inverse modules
+Exports: A transformed bitmap and a new filepath location
+Parameters: A bitmap
+
+These modules edit the bitmap's buffer, re-assigning the class properties we made when we parsed the bitmap earlier. Once complete, the module assigns a new filepath so that instead of overwriting the other bitmap, we can create a new one in the same location. The module then calls the write module
+
+## Write module
+Exports: A new bitmap file
+Parameters: A transformed bitmap and a new file name
+
+This module writes the new bitmap to a new file in the same location as the bitmap given earlier.
+
+## Notes
+The first todo was to validate the bitmap input. I did this in my index file before even reading the file.
+
+The second todo was altering the bitmap. This was a team effort from the whole class. I really appreciated having everyone's help through this in figuring out how to edit the color table of a bitmap.
+
+The third todo was was explaining how const [file, operation] = process.argv.slice(2) works. This works by slicing the arguments that were passed in via command line (which in process.argv is an array) at the second index. The two values that were left from a process.argv array of 4 were assigned the variables file and operation.
+
+
+
 
