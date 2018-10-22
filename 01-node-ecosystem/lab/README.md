@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) 01: Node Ecosystem
-========================================================
+# Describe values of each exported module in lib folder
 
 ## Implementation
 * Create a file called `index.js` that requires both the greet and arithmetic modules.
