@@ -1,6 +1,18 @@
 'use strict'
 
 const fs = require('fs');
+
+const util = require('util');
+
+module.exports = (paths, done) => {
+
+    let contents = [];
+
+    const readFile = util.promisify(fs.readFile);
+
+    readFile(paths[0]).then(data => contents.push(data.toString())).then(() => readFile(paths[1])).then(data => contents.push(data.toString())).then(() => readFile(paths[2])).then(data => contents.push(data.toString())).then(() => doneHandler(null, contents)).catch(doneHandler);
+};
+
 let file3 = `${__dirname}/../data/eenie.txt`;
 let file2 = `${__dirname}/../data/meenie.txt`;
 let file1 = `${__dirname}/../data/moe.txt`;
@@ -49,3 +61,4 @@ const readFiles = (fileArr, (err,result) => {
 });
 
 readAll(fileArr, readFiles);
+
