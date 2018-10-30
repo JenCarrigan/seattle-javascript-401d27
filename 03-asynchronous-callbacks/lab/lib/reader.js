@@ -61,4 +61,3 @@ const readFiles = (fileArr, (err,result) => {
 });
 
 readAll(fileArr, readFiles);
-
