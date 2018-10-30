@@ -25,7 +25,6 @@ class Atty {
     return storage.delete(id);
   }
   static updateOne(id, criteria) {
-
     return storage.update(id, criteria);
   }
 }

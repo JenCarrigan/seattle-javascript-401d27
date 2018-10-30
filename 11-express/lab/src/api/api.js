@@ -6,7 +6,6 @@ const router = new express.Router();
 let sendJSON = (res, data) => {
   res.statusCode = 200;
   res.statusMessage = 'OK';
-  console.log(JSON.stringify(data));
   res.write(JSON.stringify(data));
   res.end();
 };
@@ -34,11 +33,18 @@ router.get('/api/v1/attorneys/:id', (req,res) => {
 });
 
 router.post('/api/v1/attorneys', (req, res) => {
-  console.log(req.body);
-  let atty = new Atty(req.body);
-  atty.save()
-    .then(data => sendJSON(res, data))
-    .catch(console.error);
+  if(Object.keys(req.body).length === 0) {
+    res.statusCode = 400;
+    res.statusMessage = 'Bad Request';
+    res.write('Bad Request');
+    res.end();
+  }
+  else {
+    let atty = new Atty(req.body);
+    atty.save()
+      .then(data => sendJSON(res, data))
+      .catch(console.error);
+  }
 });
 
 router.delete('/api/v1/attorneys/:id', (req, res) => {

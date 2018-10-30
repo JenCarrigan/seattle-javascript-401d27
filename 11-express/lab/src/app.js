@@ -8,6 +8,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(api);
 
 module.exports = {
+  app,
   start: (port) => {
     if (!isRunning) {
       app.listen(port, (err) => {
