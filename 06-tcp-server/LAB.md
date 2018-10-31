@@ -44,3 +44,4 @@ For this assignment, you will be building a TCP chatroom. Clients should be able
 
 ## Documentation  
 Write basic documention for starting your server connection and using the chatroom application.  Be sure to use proper markdown constructs and ```highlight blocks of code```.
+
