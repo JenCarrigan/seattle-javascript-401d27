@@ -1,0 +1,17 @@
+{
+  "name": "03-asynchronous-callbacks",
+  "version": "1.0.0",
+  "description": "![cf](http://i.imgur.com/7v5ASc8.png) 03: Asynchronous Callbacks =====================================",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage --watchAll"
+  },
+  "author": "Jen Carrigan",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
+}
