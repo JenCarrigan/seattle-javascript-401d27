@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
+
 require('dotenv').config();
->>>>>>> 572708ad0f3486d0e905710dfc76437a143113d1
 import request from 'supertest';
 const { app } = require('./app.js');
 
 describe('App Tests', () => {
-<<<<<<< HEAD
   
   it('should create an album', (done) => {
 
@@ -18,7 +15,6 @@ describe('App Tests', () => {
         done();
       });
 
-=======
   it('should throw 404 for unregistered routes', (done) => {
     request(app)
       .patch('/api/v1/attorneysxxxx')
@@ -64,6 +60,5 @@ describe('App Tests', () => {
       expect(response.status).toBe(400);
       done();
     });
->>>>>>> 572708ad0f3486d0e905710dfc76437a143113d1
   });
 });
