@@ -1,5 +1,6 @@
 import express from 'express';
 
+
 const app = express();
 
 app.use(express.json());
@@ -16,9 +17,11 @@ app.use(api);
 module.exports = {
   app,
   start: (port) => {
+
     app.listen(port, () => console.log('Running on', port));
   }
 }
+
     if (!isRunning) {
       app.listen(port, (err) => {
         if (err) {
