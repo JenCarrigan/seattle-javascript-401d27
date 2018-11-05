@@ -2,7 +2,6 @@ import express from 'express';
 import cors from 'cors';
 
 import router from './api/api.js';
-
 import errorHandler from './middleware/error.js';
 import notFound from './middleware/404.js';
 

@@ -2,7 +2,6 @@ require('dotenv').config();
 require('babel-register');
 
 const mongoose = require('mongoose');
-
 const options = {
   useNewUrlParser: true,
   useCreateIndex: true,

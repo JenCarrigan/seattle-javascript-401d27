@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-
 let Schema = mongoose.Schema;
 
 const attySchema = new Schema ({
